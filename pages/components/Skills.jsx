@@ -30,7 +30,8 @@ const Skills = () => {
             <li className="text-3xl font-semibold mt-8">JAVASCRIPT</li>
             <li className="text-3xl font-semibold mt-8">HTML</li>
             <li className="text-3xl font-semibold mt-8">CSS</li>
-            <li className="text-3xl font-semibold mt-8">nextJS</li>
+            <li className="text-3xl font-semibold mt-8">NEXT.js</li>
+            <li className="text-3xl font-semibold mt-8">React</li>
             <li className="text-3xl font-semibold mt-8">Tailwind CSS</li>
           </ul>
         </div>
