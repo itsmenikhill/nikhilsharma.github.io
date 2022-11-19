@@ -4,11 +4,11 @@ const Skills = () => {
   return (
     <div className="items-center md:justify-start md:ml-[25%]">
       <div className="md:p-20 p-8">
-        <h1 className="text-white font-semibold text-7xl md:text-9xl tracking-wider pb-8">
+        <h1 className="text-gray-700 dark:text-gray-300 font-semibold text-7xl md:text-9xl tracking-wider pb-8">
           WHAT DO I KNOW?
         </h1>
         <div>
-        <div className="flex justify-start animate-bounce m-32 ml-2">
+        <div className="flex justify-start animate-bounce m-32 ml-2 text-gray-700 dark:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,7 +25,7 @@ const Skills = () => {
           </svg>
           {/* <h1 className="pl-6 text-gray-200 animate-pulse">Scroll down</h1> */}
         </div>
-          <ul className="grid grid-cols-1 pt-12">
+          <ul className="grid grid-cols-1 pt-12 text-gray-700 dark:text-white">
             <li className="text-3xl font-semibold mt-8">JAVA</li>
             <li className="text-3xl font-semibold mt-8">JAVASCRIPT</li>
             <li className="text-3xl font-semibold mt-8">HTML</li>

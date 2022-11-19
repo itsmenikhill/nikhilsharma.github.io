@@ -1,6 +1,10 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { useEffect } from "react";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

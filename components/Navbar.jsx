@@ -22,32 +22,32 @@ const Navbar = () => {
       </div> */}
 
       <div className="md:flex md:h-screen">
-        <aside className="w-[25%] fixed h-screen sidebar bg-zinc-300/20 p-10 transform -translate-x-full transition md:translate-x-0 ease-in-out duration-200">
+        <aside className="w-[25%] fixed h-screen sidebar bg-sky-300/40 dark:bg-zinc-300/20 p-10 transform -translate-x-full transition md:translate-x-0 ease-in-out duration-200">
           <ul className="float-right justify-center align-middle pt-[60%]">
             <li className="p-4">
               <Link legacyBehavior href="/components/About">
-                <a className="no-underline text-gray-300 font-bold relative hover:text-cyan-300  ease-in duration-150 ">
+                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
                   Home
                 </a>
               </Link>
             </li>
             <li className="p-4">
               <Link legacyBehavior href="/components/Skills">
-                <a className="no-underline text-gray-300 font-bold relative hover:text-cyan-300 ease-in duration-150">
+                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
                   Skills
                 </a>
               </Link>
             </li>
             <li className="p-4">
               <Link legacyBehavior href="/components/Experience">
-                <a className="no-underline text-gray-300 font-bold relative hover:text-cyan-300 ease-in duration-150">
+                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
                   Experience
                 </a>
               </Link>
             </li>
             <li className="p-4">
               <Link legacyBehavior href="/components/Contact">
-                <a className="no-underline text-gray-300 font-bold relative hover:text-cyan-300 ease-in duration-150">
+                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
                   Contact
                 </a>
               </Link>
