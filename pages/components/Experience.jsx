@@ -1,13 +1,50 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Experience = () => {
+  const variants = {
+    initial: {
+      y: 1000,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    },
+    exit: {
+      y: -1000,
+      opacity: 0,
+    },
+  };
+
   return (
     <div className="items-center md:justify-start md:ml-[25%]">
       <div className="md:p-20 p-14">
-        <h1 className="text-gray-700 dark:text-gray-300 font-semibold text-7xl md:text-9xl tracking-wider pb-8">
-          WHAT HAVE I DONE?
-        </h1>
-        <div className="flex justify-start animate-bounce m-32 ml-2 text-gray-700 dark:text-white">
+        <motion.h1
+          className="text-gray-700 dark:text-gray-300 font-semibold text-7xl md:text-9xl tracking-wider pb-8"
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          transition={{ type: "spring", stiffness: 50, mass: 0.1 }}
+        >
+          <motion.div
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+          >
+            WHAT HAVE I DONE?
+          </motion.div>
+        </motion.h1>
+        <motion.div
+          className="flex justify-start animate-bounce m-32 ml-2 text-gray-700 dark:text-white"
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -23,8 +60,12 @@ const Experience = () => {
             />
           </svg>
           {/* <h1 className="pl-6 text-gray-200 animate-pulse">Scroll down</h1> */}
-        </div>
-        <div className="grid">
+        </motion.div>
+        <motion.div
+          className="grid"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+        >
           <div className="md:flex justify-start flex-cols pt-12 max-w-4xl">
             <div className="md:flex flex-1 pt-6 md:pt-12">
               <div className="md:grid grid-rows-5">
@@ -33,18 +74,23 @@ const Experience = () => {
                     Senior Systems Engineer
                   </h1>
                 </div>
-                <h1 className="text-xl pt-1 text-gray-700 dark:text-white">Infosys Ltd.</h1>
-                <h1 className="text-xl text-gray-700 dark:text-white">May 2022-present</h1>
+                <h1 className="text-xl pt-1 text-gray-700 dark:text-white">
+                  Infosys Ltd.
+                </h1>
+                <h1 className="text-xl text-gray-700 dark:text-white">
+                  May 2022-present
+                </h1>
               </div>
             </div>
             <div className="flex flex-[1.5]">
               <div className="pt-12 md:p-12">
                 <p className="text-gray-700 dark:text-white md:text-xl ">
-                  I was a part of the development team for a &apos;Goods and Services
-                  Tax Network&apos; project, which is a non-government organisation
-                  that manages the entire IT system of the GSTN portal. GSTN
-                  portal allowed users to register or track every financial
-                  transaction and provides taxpayers with all the services.
+                  I was a part of the development team for a &apos;Goods and
+                  Services Tax Network&apos; project, which is a non-government
+                  organisation that manages the entire IT system of the GSTN
+                  portal. GSTN portal allowed users to register or track every
+                  financial transaction and provides taxpayers with all the
+                  services.
                 </p>
               </div>
             </div>
@@ -97,7 +143,7 @@ const Experience = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

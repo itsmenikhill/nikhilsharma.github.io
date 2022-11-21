@@ -2,18 +2,58 @@ import React from "react";
 import Image from "next/image";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { AiOutlineDownload, AiOutlineMail } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const variants = {
+    initial: {
+      y: 1000,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    },
+    exit: {
+      y: -1000,
+      opacity: 0,
+    },
+  };
+
   return (
     <div className="items-center md:justify-start md:ml-[25%] ">
       <div className="md:p-20 p-8">
-        <h1 className="text-gray-700 dark:text-gray-300 font-semibold text-7xl md:text-9xl tracking-wider pb-8">
+        <motion.h1
+          className="text-gray-700 dark:text-gray-300 font-semibold text-7xl md:text-9xl tracking-wider pb-8"
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+        >
           WANT TO KNOW MORE?
-        </h1>
-        <h2 className="text-gray-700 dark:text-gray-300 font-semibold text-3xl md:text-5xl tracking-wider pb-8">
+        </motion.h1>
+        <motion.h2
+          className="text-gray-700 dark:text-gray-300 font-semibold text-3xl md:text-5xl tracking-wider pb-8"
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{
+            duration: 0.6,
+            ease: [0.43, 0.13, 0.23, 0.96],
+            delay: 0.6,
+          }}
+        >
           LET&apos;S CHAT.
-        </h2>
-        <div className="flex justify-start animate-bounce m-32 ml-2 text-gray-700 dark:text-white">
+        </motion.h2>
+        <motion.div
+          className="flex justify-start animate-bounce m-32 mt-14 ml-2 text-gray-700 dark:text-white"
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit={{ opacity: 0 }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -29,17 +69,26 @@ const Contact = () => {
             />
           </svg>
           {/* <h1 className="pl-6 text-gray-200 animate-pulse">Scroll down</h1> */}
-        </div>
-        <div className="mt-12">
+        </motion.div>
+        <motion.div
+          className="mt-12"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+        >
           <p className="text-lg pt-16 text-gray-700 dark:text-white tracking-wider max-w-3xl">
             Currently I am looking for some remote opportunities. My aim is to
             create something inspiring and amazing. I want to meet new people
             and create something amazing together. Feel free to reach out to me
             via any of my socials, or fill the form below.
           </p>
-        </div>
-        <div>
-          <p className="text-3xl py-16 text-gray-700 dark:text-white">Contact Me</p>
+        </motion.div>
+        <motion.div
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+        >
+          <p className="text-3xl py-16 text-gray-700 dark:text-white">
+            Contact Me
+          </p>
           <div className="md:max-w-3xl border border-black dark:border dark:border-white  p-1 max-w-3xl rounded-2xl">
             <div className="flex flex-1">
               <form action="" className="w-full">
@@ -135,7 +184,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

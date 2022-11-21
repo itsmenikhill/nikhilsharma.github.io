@@ -1,12 +1,9 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { useEffect } from "react";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     document.body.classList.add("flex");
     document.body.classList.add("h-full");
@@ -19,7 +16,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Layout>
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait" onExitComplete={() => {
+          if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0 })
+          }
+        }}>
+          <Component {...pageProps} key={router.pathname} />
+        </AnimatePresence>
       </Layout>
     </>
   );
