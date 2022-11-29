@@ -1,83 +1,153 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Banner from "./Banner";
 
 const Skills = () => {
   const variants = {
     initial: {
-      y: 1000,
+      y: 200,
       opacity: 0,
     },
     animate: {
-      y: 0,
+      y: -100,
       opacity: 1,
-    },
-    exit: {
-      y: -1000,
-      opacity: 0,
     },
   };
 
   return (
-    <div
-      className="items-center md:justify-start md:ml-[25%]"
-    >
-      <div className="md:p-20 p-8">
-        <motion.h1
-          className="text-gray-700 dark:text-gray-300 font-semibold text-7xl md:text-9xl tracking-wider pb-8"
-          variants={variants}
-          initial="initial"
-          animate="animate"
-          transition={{ type: "spring", stiffness: 50, mass: 0.1 }}
-        >
-          <motion.div
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-          >
-            WHAT DO I KNOW?
-          </motion.div>
-        </motion.h1>
-        <div>
-          <motion.div
-            className="flex justify-start animate-bounce m-32 ml-2 text-gray-700 dark:text-white"
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit={{ opacity: 0 }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-8 h-8"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
-              />
-            </svg>
-            {/* <h1 className="pl-6 text-gray-200 animate-pulse">Scroll down</h1> */}
-          </motion.div>
-          <motion.ul
-            className="grid grid-cols-1 pt-12 text-gray-700 dark:text-white"
-            exit={{ opacity: 0 }}
-          >
-            <li className="text-3xl font-semibold mt-8">JAVA</li>
-            <li className="text-3xl font-semibold mt-8">JAVASCRIPT</li>
-            <li className="text-3xl font-semibold mt-8">HTML</li>
-            <li className="text-3xl font-semibold mt-8">CSS</li>
-            <li className="text-3xl font-semibold mt-8">NEXT.js</li>
-            <li className="text-3xl font-semibold mt-8">React</li>
-            <li className="text-3xl font-semibold mt-8">Tailwind CSS</li>
-          </motion.ul>
+    <>
+      <div className="md:text-[24rem] text-[8rem] pt-8" id="skills">
+        <div className="absolute md:pt-16 pt-8">
+          <div className="text-gray-900">
+            <Banner text="skills" />
+          </div>
+        </div>
+        <div className="relative">
+          <Banner text="SKILLS" />
         </div>
       </div>
-    </div>
+      <div className="items-center md:justify-start md:ml-[16%] pt-32 max-w-5xl">
+        <div className="md:p-20 p-8">
+          <div>
+            <motion.ul
+              className="grid grid-cols-1 pt-12 text-gray-700 dark:text-white"
+              variants={variants}
+              initial="initial"
+              whileInView="animate"
+              transition={{
+                type: "spring",
+                mass: 0.1,
+                stiffness: 50,
+                staggerChildren: 0.4,
+              }}
+            >
+              <div className="grid md:grid-cols-3 grid-cols-1 gap-20">
+                <div className="hover:scale-[1.2] dark:hover:bg-gray-800 transition duration-200 max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-900 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-8">
+                    <img className="rounded-t-lg" src="/java.png" alt="" />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      Java
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-8">
+                    <img
+                      className="rounded-t-lg"
+                      src="/javascript.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      Javascript
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-8">
+                    <img className="rounded-t-lg" src="/html.png" alt="" />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      HTML
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-8">
+                    <img className="rounded-t-lg" src="/css.png" alt="" />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      CSS
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-14">
+                    <img className="rounded-t-lg" src="/react.png" alt="" />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      React
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-8 pb-20">
+                    <div className="dark:bg-white bg-gray-700 top-4 rounded-full h-[114px] w-[114px] relative "></div>
+                      <img className="absolute rounded-t-lg" src="/nextjs.png" alt="" />
+                  </div>
+                  <div className="">
+                    <h5 className="mt-1 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      NextJS
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-8">
+                    <img className="rounded-t-lg" src="/tailwind.png" alt="" />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      TailwindCSS
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <div className="flex justify-center align-center py-10">
+                    <img
+                      className="rounded-t-lg h-32 w-32"
+                      src="/git.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      Git
+                    </h5>
+                  </div>
+                </div>
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  {/* <div className="flex justify-center align-center py-8">
+                  <img className="rounded-t-lg" src="/java.png" alt="" />
+                </div> */}
+                  <div className="md:py-32 py-32">
+                    <h5 className="text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                      And more..
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </motion.ul>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

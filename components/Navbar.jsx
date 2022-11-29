@@ -1,58 +1,87 @@
 import React, { lazy } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { AiOutlineDownload, AiOutlineMail } from "react-icons/ai";
+import {
+  AiOutlineDownload,
+  AiOutlineMail,
+  AiOutlineMenu,
+} from "react-icons/ai";
 import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll/modules";
+import { useState } from "react";
 
 const Navbar = () => {
-  const handleClick = () => {
-    let sidebar = document.querySelector(".mob-nav");
-    if (sidebar.classList.contains("translate-x-full")) {
-      sidebar.classList.remove("translate-x-full");
-    } else {
-      sidebar.classList.add("translate-x-full");
-    }
+  const variants = {
+    initial: {
+      x: 0,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+    },
   };
+
+  let Links = [
+    {
+      name: "Home",
+      link: "home",
+    },
+    {
+      name: "Skills",
+      link: "skills",
+    },
+    {
+      name: "Experience",
+      link: "experience",
+    },
+    {
+      name: "Contact Me",
+      link: "contact",
+    },
+  ];
+
+  let [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* <div className="bg-zinc-300/20 text-gray-100 flex justify-between sticky top-0 md:hidden">
-        <a href="" className="block p-4 text-white font-bold">
-          :)
-        </a>
-      </div> */}
-
-      <div className="md:flex md:h-screen">
-        <aside className="w-[25%] fixed h-screen sidebar bg-sky-300/40 dark:bg-zinc-300/20 p-10 transform -translate-x-full transition md:translate-x-0 ease-in-out duration-200">
-          <ul className="float-right justify-center align-middle pt-[60%]">
-            <li className="p-4">
-              <Link legacyBehavior href="/components/About" scroll={false}>
-                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="p-4">
-              <Link legacyBehavior href="/components/Skills" scroll={false}>
-                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
-                  Skills
-                </a>
-              </Link>
-            </li>
-            <li className="p-4">
-              <Link legacyBehavior href="/components/Experience" scroll={false}>
-                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
-                  Experience
-                </a>
-              </Link>
-            </li>
-            <li className="p-4">
-              <Link legacyBehavior href="/components/Contact" scroll={false}>
-                <a className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white">
-                  Contact
-                </a>
-              </Link>
-            </li>
+      <div className="">
+        <aside className="flex justify-end align-middle w-full z-50 fixed sidebar bg-sky-200 dark:bg-zinc-700 p-6 transform">
+          <div className="md:-translate-x-[870px] -translate-x-[275px] text-xl md:text-2xl font-semibold tracking-widest">
+            <p>Nikhil</p>
+          </div>
+          <div
+            onClick={() => setOpen(!open)}
+            className="text-3xl absolute right-3 top-6 cursor-pointer md:hidden"
+          >
+            <AiOutlineMenu></AiOutlineMenu>
+          </div>
+          <ul
+            onClick={() => setOpen(false)}
+            id="list"
+            className={`md:flex md:items-center md:pb-0 pb-12 pt-10 h-screen md:pt-0 md:h-8 md:translate-x-0 absolute md:static md:z-auto z-[-1] w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
+              open ? "translate-x-[200px] bg-zinc-700" : "translate-x-[500px]"
+            }`}
+          >
+            
+            {Links.map((link) => (
+              <li
+                key={link.name}
+                className="md:ml-8 text-lg font-semibold md:my-0 my-7"
+              >
+                <button>
+                  <Link
+                    onClick={() => setOpen(false)}
+                    to={link.link}
+                    smooth={true}
+                    className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white"
+                  >
+                    {link.name}
+                  </Link>
+                </button>
+              </li>
+            ))}
           </ul>
         </aside>
       </div>

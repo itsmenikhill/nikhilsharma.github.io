@@ -1,7 +1,14 @@
 import "../styles/globals.css";
-import Layout from "../components/Layout";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Navbar from "../components/Navbar";
+import Banner from "./components/Banner";
+import "../styles/banner.scss";
+import "../styles/marquee.scss";
 
 function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
@@ -15,7 +22,7 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      <Layout>
+      {/* <Layout>
         <AnimatePresence mode="wait" onExitComplete={() => {
           if (typeof window !== 'undefined') {
             window.scrollTo({ top: 0 })
@@ -23,7 +30,14 @@ function MyApp({ Component, pageProps, router }) {
         }}>
           <Component {...pageProps} key={router.pathname} />
         </AnimatePresence>
-      </Layout>
+      </Layout> */}
+
+      <Navbar />
+      <About />
+      {/* <Banner text="Software Dev" /> */}
+      <Skills />
+      <Experience />
+      <Contact />
     </>
   );
 }
