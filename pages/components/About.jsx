@@ -60,7 +60,7 @@ const About = () => {
                 variants={variants}
                 transition={{ type: "spring", stiffness: 50, mass: 0.1 }}
               >
-                <span className="bg-gradient-to-r from-black to-white bg-clip-text text-transparent md:bg-gradient-to-r md:from-gray-300 md:to-gray-300">
+                <span className="bg-gradient-to-r from-black to-white dark:from-gray-300 dark:to-gray-300 bg-clip-text text-transparent md:bg-gradient-to-r md:from-gray-700 md:to-gray-700 md:dark:from-gray-300 md:dark:to-gray-300">
                   NIKHIL
                 </span>{" "}
                 SHARMA
