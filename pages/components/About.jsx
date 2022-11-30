@@ -83,16 +83,6 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-      {/* <div className="md:text-[24rem] text-[8rem] pt-8 pb-20">
-        <div className="absolute md:pt-16 pt-8">
-          <div className="text-gray-900">
-            <Banner text="about me" />
-          </div>
-        </div>
-        <div className="relative">
-          <Banner text="ABOUT ME" />
-        </div>
-      </div> */}
       <div className="md:pl-32 md:p-24 p-4 m-8 pt-48">
         <motion.p
           className="max-w-3xl relative md:text-3xl text-2xl md:pt-8 text-gray-700 dark:text-gray-300 tracking-wider pb-20 font-light"
