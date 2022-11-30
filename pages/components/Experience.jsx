@@ -21,11 +21,11 @@ const Experience = () => {
         id="experience"
       >
         <div className="absolute md:pt-16 pt-8">
-          <div className="text-gray-900">
+          <div className="dark:text-gray-900 text-violet-100">
             <Banner text="experience" />
           </div>
         </div>
-        <div className="relative">
+        <div className="relative dark:text-gray-300 text-violet-400">
           <Banner text="EXPERIENCE" />
         </div>
       </div>

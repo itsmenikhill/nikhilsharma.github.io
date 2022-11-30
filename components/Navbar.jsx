@@ -47,8 +47,8 @@ const Navbar = () => {
   return (
     <>
       <div className="">
-        <aside className="flex justify-end align-middle w-full z-50 fixed sidebar bg-sky-200 dark:bg-zinc-700 p-6 transform">
-          <div className="md:-translate-x-[870px] -translate-x-[275px] text-xl md:text-2xl font-semibold tracking-widest">
+        <aside className="flex justify-end align-middle w-full z-50 fixed sidebar bg-violet-200 dark:bg-zinc-700 p-6 transform">
+          <div className="md:-translate-x-[870px] -translate-x-[275px] text-xl md:text-2xl font-semibold tracking-widest text-zinc-700">
             <p>Nikhil</p>
           </div>
           <div
@@ -61,7 +61,7 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             id="list"
             className={`md:flex md:items-center md:pb-0 pb-12 pt-10 h-screen md:pt-0 md:h-8 md:translate-x-0 absolute md:static md:z-auto z-[-1] w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
-              open ? "translate-x-[200px] bg-zinc-700" : "translate-x-[500px]"
+              open ? "translate-x-[200px] dark:bg-zinc-700 bg-violet-200" : "translate-x-[500px]"
             }`}
           >
             
@@ -75,7 +75,7 @@ const Navbar = () => {
                     onClick={() => setOpen(false)}
                     to={link.link}
                     smooth={true}
-                    className="no-underline text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white"
+                    className="text-gray-600 dark:text-gray-300 font-bold relative hover:text-gray-800 ease-in duration-150 dark:hover:text-white"
                   >
                     {link.name}
                   </Link>

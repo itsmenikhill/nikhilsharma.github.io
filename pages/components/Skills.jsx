@@ -19,11 +19,11 @@ const Skills = () => {
     <>
       <div className="md:text-[24rem] text-[8rem] pt-8" id="skills">
         <div className="absolute md:pt-16 pt-8">
-          <div className="text-gray-900">
+          <div className="dark:text-gray-900 text-violet-100">
             <Banner text="skills" />
           </div>
         </div>
-        <div className="relative">
+        <div className="relative dark:text-gray-300 text-violet-400">
           <Banner text="SKILLS" />
         </div>
       </div>
@@ -99,11 +99,15 @@ const Skills = () => {
                 </div>
                 <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <div className="flex justify-center align-center py-8 pb-20">
-                    <div className="dark:bg-white bg-gray-700 top-4 rounded-full h-[114px] w-[114px] relative "></div>
-                      <img className="absolute rounded-t-lg" src="/nextjs.png" alt="" />
+                    <div className="dark:bg-white top-4 rounded-full h-[114px] w-[114px] relative "></div>
+                    <img
+                      className="absolute rounded-t-lg"
+                      src="/nextjs.png"
+                      alt=""
+                    />
                   </div>
                   <div className="">
-                    <h5 className="mt-1 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
+                    <h5 className="mb-6 mt-1 text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
                       NextJS
                     </h5>
                   </div>

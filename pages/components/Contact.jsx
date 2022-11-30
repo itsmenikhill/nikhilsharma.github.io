@@ -57,11 +57,11 @@ const Contact = () => {
 
       <div id="contact" className="md:text-[24rem] text-[8rem] pt-8">
         <div className="absolute md:pt-16 pt-8">
-          <div className="text-gray-900">
+          <div className="dark:text-gray-900 text-violet-100">
             <Banner text="contact me" />
           </div>
         </div>
-        <div className="relative">
+        <div className="relative dark:text-gray-300 text-violet-400">
           <Banner text="CONTACT ME" />
         </div>
       </div>
@@ -114,41 +114,40 @@ const Contact = () => {
                 <form
                   name="submit-to-google-sheet"
                   action=""
-                  className="max-w-xl flex flex-col"
+                  className="max-w-xl flex flex-col dark:text-gray-700 text-black"
                 >
                   <input
                     name="Name"
-                    className="m-2 p-2 border-b-2 bg-black focus:outline-none"
+                    className="m-2 p-2 border-b-2 dark:bg-black bg-transparent focus:outline-none"
                     type="text"
                     placeholder="Name"
                     required
                   />
                   <input
                     name="Email"
-                    className="m-2 p-2 border-b-2 bg-black focus:outline-none"
+                    className="m-2 p-2 border-b-2 dark:bg-black bg-transparent focus:outline-none"
                     type="email"
                     placeholder="Email"
                     required
                   />
                   <textarea
                     name="Message"
-                    className="m-2 p-2 border-b-2 bg-black focus:outline-none"
+                    className="m-2 p-2 border-b-2 dark:bg-black bg-transparent focus:outline-none"
                     placeholder="Your message"
                     id="msg"
                     cols="43"
                     rows="5"
                   ></textarea>
                   <button
-                    // onClick={handleClick}
                     id="btn"
-                    className="text-xl md:w-60 w-full mt-8 bg-purple-500 rounded-3xl px-8 py-2 hover:bg-purple-800 transtion ease-in-out duration-200"
+                    className="text-white dark:text-gray-100 text-xl md:w-60 w-full mt-8 bg-purple-500 rounded-3xl px-8 py-2 hover:bg-purple-800 transtion ease-in-out duration-200"
                   >
                     Send Message
                   </button>
-                  <p id="msgSent" className="pt-8 text-lg text-purple-400"></p>
+                  <p id="msgSent" className="pt-8 text-lg dark:text-purple-400"></p>
                 </form>
               </div>
-              <div className="contact-right basis-[35%] text-xl pt-8">
+              <div className="contact-right basis-[35%] text-xl pt-8 text-gray-700 dark:text-gray-300">
                 <h2>Feel free to reach out to me!</h2>
                 <div className="flex mt-8 sm:hidden ">
                   <div className="my-auto">
@@ -156,7 +155,7 @@ const Contact = () => {
                   </div>
                   <p className="mx-2 my-auto">nklsharma2152@gmail.com</p>
                 </div>
-                <div className="flex gap-6 text-2xl mt-8">
+                <div className="flex gap-6 text-2xl mt-8 ">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -191,7 +190,7 @@ const Contact = () => {
                   </a>
                 </div>
 
-                <button className="w-full md:w-48 mt-8 bg-purple-500 rounded-3xl px-6 py-2 hover:bg-purple-800 transtion ease-in-out duration-200">
+                <button className="dark:text-gray-100 text-white w-full md:w-48 mt-8 bg-purple-500 rounded-3xl px-6 py-2 hover:bg-purple-800 transtion ease-in-out duration-200">
                   <a href="resume.pdf" download>
                     Download CV
                   </a>

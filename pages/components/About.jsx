@@ -22,26 +22,31 @@ const About = () => {
   };
   return (
     <>
-      <div className="">
+      <div className="overflow-hidden">
         <motion.div
           id="home"
           className="items-center md:justify-center md:ml-[16%] pt-24 max-w-5xl flex"
           exit={{ y: -1000, opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
         >
-          <motion.div className="relative md:-right-96 md:-top-20" 
+          <motion.div
+            className="relative md:-right-96 md:-top-20"
             initial={{
-              opacity: 0
+              opacity: 0,
             }}
             animate={{
-              opacity: 1
+              opacity: 1,
             }}
             transition={{
               delay: 1,
               // duration: 150
             }}
           >
-            <img className="bg-black rounded-full" src="nikhil.png" alt="" />
+            <img
+              className="rounded-full bg-gradient-to-b from-white to-violet-400 dark:from-black dark:to-black"
+              src="nikhil.png"
+              alt=""
+            />
           </motion.div>
           <div className="absolute md:p-10 p-8 md:pt-0 pt-[550px] md:left-20 md:top-60">
             <motion.div
@@ -51,15 +56,18 @@ const About = () => {
               transition={{ staggerChildren: 0.3 }}
             >
               <motion.h1
-                className="text-gray-700 dark:text-gray-300 font-medium text-6xl md:text-[9rem] max-w-xl tracking-wider pb-4 md:pb-8"
+                className="text-gray-700 dark:text-gray-300 font-medium text-6xl md:text-[9rem] max-w-xl tracking-wider pb-8 md:pb-8"
                 variants={variants}
                 transition={{ type: "spring", stiffness: 50, mass: 0.1 }}
               >
-                NIKHIL SHARMA
+                <span className="bg-gradient-to-r from-black to-white bg-clip-text text-transparent md:bg-gradient-to-r md:from-gray-300 md:to-gray-300">
+                  NIKHIL
+                </span>{" "}
+                SHARMA
               </motion.h1>
             </motion.div>
             <motion.h2
-              className="text-gray-700 dark:text-gray-300 font-medium text-2xl md:text-7xl max-w-3xl tracking-wider pb-16"
+              className="text-gray-700 dark:text-gray-300 font-medium text-2xl md:text-7xl max-w-3xl tracking-wider pb-16 ml-1"
               variants={variants}
               initial="initial"
               animate="animate"
