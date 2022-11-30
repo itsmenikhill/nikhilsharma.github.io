@@ -22,19 +22,8 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      {/* <Layout>
-        <AnimatePresence mode="wait" onExitComplete={() => {
-          if (typeof window !== 'undefined') {
-            window.scrollTo({ top: 0 })
-          }
-        }}>
-          <Component {...pageProps} key={router.pathname} />
-        </AnimatePresence>
-      </Layout> */}
-
       <Navbar />
       <About />
-      {/* <Banner text="Software Dev" /> */}
       <Skills />
       <Experience />
       <Contact />

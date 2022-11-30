@@ -23,7 +23,6 @@ const letterAni = {
 
 const Banner = (props) => {
   const [playMarquee, setPlayMarquee] = useState(false);
-  console.log(props.text);
   useEffect(() => {
     setTimeout(() => {
       setPlayMarquee(true);
@@ -32,7 +31,7 @@ const Banner = (props) => {
   return (
     <AnimatePresence>
       <motion.div className="banner" variants={banner}>
-        <BannerRowCenter title={ props.text } playMarquee={playMarquee} />
+        <BannerRowCenter title={props.text} playMarquee={playMarquee} />
       </motion.div>
     </AnimatePresence>
   );
@@ -60,8 +59,9 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowCenter = ({ title, playMarquee }) => {
   return (
     <>
-      
-      <div className={`banner-row marquee w-screen  ${playMarquee && "animate"}`}>
+      <div
+        className={`banner-row marquee w-screen  ${playMarquee && "animate"}`}
+      >
         <motion.div
           initial={{ y: 310 }}
           animate={{ y: 0 }}

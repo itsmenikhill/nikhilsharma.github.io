@@ -24,16 +24,6 @@ const Contact = () => {
     },
   };
 
-  // const handleClick = () => {
-  //   const btn = document.getElementById("msgSent");
-  //   setTimeout(() => {
-  //     btn.classList.remove("hidden");
-  //   }, 1200);
-  //   setTimeout(() => {
-  //     btn.classList.add("hidden");
-  //   }, 3000);
-  // };
-
   return (
     <>
       <Script id="show-banner">
@@ -144,12 +134,15 @@ const Contact = () => {
                   >
                     Send Message
                   </button>
-                  <p id="msgSent" className="pt-8 text-lg dark:text-purple-400"></p>
+                  <p
+                    id="msgSent"
+                    className="pt-8 text-lg dark:text-purple-400"
+                  ></p>
                 </form>
               </div>
               <div className="contact-right basis-[35%] text-xl pt-8 text-gray-700 dark:text-gray-300">
                 <h2>Feel free to reach out to me!</h2>
-                <div className="flex mt-8 sm:hidden ">
+                <div className="flex mt-8">
                   <div className="my-auto">
                     <AiOutlineMail />
                   </div>

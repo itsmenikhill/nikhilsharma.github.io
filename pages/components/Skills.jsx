@@ -42,8 +42,8 @@ const Skills = () => {
                 staggerChildren: 0.4,
               }}
             >
-              <div className="grid md:grid-cols-3 grid-cols-1 gap-20">
-                <div className="hover:scale-[1.2] dark:hover:bg-gray-800 transition duration-200 max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-900 dark:border-gray-700">
+              <div className="grid md:grid-cols-3 grid-cols-1 gap-20 m-10 md:m-0">
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-900 dark:border-gray-700">
                   <div className="flex justify-center align-center py-8">
                     <img className="rounded-t-lg" src="/java.png" alt="" />
                   </div>
@@ -137,9 +137,6 @@ const Skills = () => {
                   </div>
                 </div>
                 <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                  {/* <div className="flex justify-center align-center py-8">
-                  <img className="rounded-t-lg" src="/java.png" alt="" />
-                </div> */}
                   <div className="md:py-32 py-32">
                     <h5 className="text-2xl font-bold tracking-tight flex justify-center text-gray-900 dark:text-white">
                       And more..

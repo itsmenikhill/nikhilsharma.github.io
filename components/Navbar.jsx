@@ -48,7 +48,7 @@ const Navbar = () => {
     <>
       <div className="">
         <aside className="flex justify-end align-middle w-full z-50 fixed sidebar bg-violet-200 dark:bg-zinc-700 p-6 transform">
-          <div className="md:-translate-x-[870px] -translate-x-[275px] text-xl md:text-2xl font-semibold tracking-widest text-zinc-700">
+          <div className="md:-translate-x-[870px] -translate-x-[275px] text-xl md:text-2xl font-semibold tracking-widest text-zinc-700 dark:text-gray-300">
             <p>Nikhil</p>
           </div>
           <div
