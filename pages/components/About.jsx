@@ -43,7 +43,7 @@ const About = () => {
             }}
           >
             <img
-              className="rounded-full bg-gradient-to-b from-white to-violet-400 dark:from-black dark:to-black"
+              className="rounded-full bg-gradient-to-b from-white to-violet-400 dark:from-black dark:to-gray-500"
               src="nikhil.png"
               alt=""
             />

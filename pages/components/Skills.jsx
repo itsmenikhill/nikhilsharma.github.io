@@ -43,7 +43,7 @@ const Skills = () => {
               }}
             >
               <div className="grid md:grid-cols-3 grid-cols-1 gap-20 m-10 md:m-0">
-                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-900 dark:border-gray-700">
+                <div className="max-w-sm border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <div className="flex justify-center align-center py-8">
                     <img className="rounded-t-lg" src="/java.png" alt="" />
                   </div>

@@ -84,7 +84,6 @@ const Contact = () => {
                 transition={{
                   type: "spring",
                   mass: 0.1,
-                  // delay: 0.5,
                   stiffness: 50,
                   staggerChildren: 0.4,
                 }}
